@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect, ReactReduxContext } from 'react-redux'
@@ -70,7 +71,7 @@ const createConnectedRouter = (structure) => {
 
       // Listen to history changes
       this.unlisten = history.listen(handleLocationChange)
-    
+
       if (!props.noInitialPop) {
         // Dispatch a location change action for the initial location.
         // This makes it backward-compatible with react-router-redux.
@@ -87,9 +88,11 @@ const createConnectedRouter = (structure) => {
     render() {
       const { history, children } = this.props
 
+      console.log("createConnectedRouter");
+
       return (
         <Router history={history}>
-          { children }
+          {children}
         </Router>
       )
     }
@@ -107,7 +110,7 @@ const createConnectedRouter = (structure) => {
       push: PropTypes.func.isRequired,
     }).isRequired,
     basename: PropTypes.string,
-    children: PropTypes.oneOfType([ PropTypes.func, PropTypes.node ]),
+    children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
     onLocationChanged: PropTypes.func.isRequired,
     noInitialPop: PropTypes.bool,
     stateCompareFunction: PropTypes.func,

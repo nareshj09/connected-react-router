@@ -1,12 +1,12 @@
 {
   "name": "connected-react-router",
   "version": "6.8.0",
-  "description": "A Redux binding for React Router v4 and v5",
+  "description": "Fork of connected-react-router to make it work with react router v6 until connected-react-router is migrated to it",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "./index.d.ts",
   "sideEffects": false,
-  "author": "Supasate Choochaisri",
+  "author": "Naresh",
   "license": "MIT",
   "files": [
     "*.md",
