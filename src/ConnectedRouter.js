@@ -88,7 +88,8 @@ const createConnectedRouter = (structure) => {
     render() {
       const { history, children } = this.props
 
-      console.log("createConnectedRouter");
+      console.log("createConnectedRouter")
+      console.log(history.location)
 
       return (
         <Router history={history}>
